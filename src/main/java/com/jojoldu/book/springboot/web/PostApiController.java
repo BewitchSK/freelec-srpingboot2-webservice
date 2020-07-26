@@ -1,6 +1,6 @@
 package com.jojoldu.book.springboot.web;
 
-import com.jojoldu.book.springboot.service.posts.PostService;
+import com.jojoldu.book.springboot.service.posts.PostsService;
 import com.jojoldu.book.springboot.web.dto.PostResponseDto;
 import com.jojoldu.book.springboot.web.dto.PostSaveRequestDto;
 import com.jojoldu.book.springboot.web.dto.PostUpdateRequestDto;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class PostApiController {
 
-    private final PostService postService;
+    private final PostsService postService;
 
     @PostMapping("/api/v1/posts")
     public Long save(@RequestBody PostSaveRequestDto requestDto) {
