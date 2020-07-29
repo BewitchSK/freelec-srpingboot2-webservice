@@ -4,15 +4,12 @@ var main = {
         $('#btn-save').on('click', function () {
             _this.save();
         });
-        /*
         $('#btn-update').on('click', function () { // chap4.5 (1)
             _this.update();
         });
-
         $('#btn-delete').on('click', function () { // chap4.5 (1)
             _this.delete();
         });
-        */
     },
     save : function () {
         var data = {
@@ -33,7 +30,6 @@ var main = {
             alert(JSON.stringify(error));
         });
     },
-    /*
     update : function () { // chap4.5 (2)
         var data = {
             title: $('#title').val(),
@@ -70,7 +66,6 @@ var main = {
             alert(JSON.stringify(error));
         });
     }
-    */
 };
 
 main.init();

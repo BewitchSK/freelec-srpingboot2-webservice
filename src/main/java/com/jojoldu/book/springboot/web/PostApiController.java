@@ -1,7 +1,7 @@
 package com.jojoldu.book.springboot.web;
 
 import com.jojoldu.book.springboot.service.posts.PostsService;
-import com.jojoldu.book.springboot.web.dto.PostResponseDto;
+import com.jojoldu.book.springboot.web.dto.PostsResponseDto;
 import com.jojoldu.book.springboot.web.dto.PostSaveRequestDto;
 import com.jojoldu.book.springboot.web.dto.PostUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
@@ -24,8 +24,13 @@ public class PostApiController {
     }
 
     @GetMapping("/api/v1/posts/{id}")
-    public PostResponseDto findById(@PathVariable Long id) {
+    public PostsResponseDto findById(@PathVariable Long id) {
         return postService.findById(id);
     }
 
+    @DeleteMapping("/api/v1/posts/{id}")
+    public Long delete(@PathVariable Long id){
+        postService.delete(id);
+        return id;
+    }
 }
