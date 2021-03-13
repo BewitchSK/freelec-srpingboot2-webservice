@@ -39,7 +39,7 @@ public class PostApiControllerTest {
     public void tearDown() throws Exception{
         postsRepository.deleteAll();
     }
-
+/*
     @Test
     public void Posts_등록된다() throws Exception{
         //given
@@ -108,6 +108,7 @@ public class PostApiControllerTest {
         }
         System.out.println("==============-");
     }
+*/
 
     @Test
     public void BaseTimeEntity_등록(){
