@@ -17,7 +17,7 @@ public class HelloControllerTest {
 
     @Autowired // [3]
     private MockMvc mvc; // [4]
-/*
+
     @Test
     public void hello가_리턴된다() throws Exception{
         String hello = "hello";
@@ -39,5 +39,4 @@ public class HelloControllerTest {
                 .andExpect(jsonPath("$.name",is(name))) // [2]
                 .andExpect(jsonPath("$.amount",is(amount)));
     }
-*/
 }
